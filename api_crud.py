@@ -1,8 +1,5 @@
 from flask import Flask, render_template, redirect, request, url_for
 import sqlite3
-# create db, active user, non active user, delete profile
-
-
 
 app = Flask(__name__)
 
