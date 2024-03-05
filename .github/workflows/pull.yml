@@ -20,5 +20,5 @@ jobs:
           title: "Automated Pull Request from dev-1 to master"
           body: |
             This is an automated pull request from the dev-1 branch to the master branch.
-          branch: dev-1
-          base: master
+          base: master  # Target branch (where changes will be merged)
+          head: dev-1    # Source branch (where changes are coming from)
