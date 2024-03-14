@@ -8,8 +8,6 @@ def get_db_connection():
     conn.row_factory = sqlite3.Row
     return conn
 
-
-
 # register - home, active -> log out -> removes from active add to non active table
 
 @app.route("/",methods=["GET", "POST"])
@@ -41,7 +39,6 @@ def up_users(u_id):
         return redirect(url_for('home'))
     return render_template('update.html',uid = u_id)
 
-
 @app.route("/delete/<int:d_id>")
 def del_users(d_id):
     conn = get_db_connection()
@@ -50,6 +47,5 @@ def del_users(d_id):
     conn.commit()
     return redirect(url_for('home'))
 
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
