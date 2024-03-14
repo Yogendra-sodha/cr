@@ -21,4 +21,3 @@ jobs:
         script: |
           cd /path/to/your/app
           git pull origin main
-          # Additional deployment steps (e.g., build, restart services) here
